@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()  
 from openai import OpenAI
 # client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(page_title="趣味探しアプリ", layout="centered")
