@@ -124,6 +124,10 @@ if st.session_state["show_form"]:
 
 if st.session_state.get("show_form"):
 
+   body_goals = []
+   mind_goals = []
+   skill_goals = []
+   
    if st.button("おすすめ趣味を探す"):
     # 設問1〜5の値（ここではすでに上で取得済みの変数をそのまま使う）
     # age, gender, address, social_style, start_preference ← 既存変数
