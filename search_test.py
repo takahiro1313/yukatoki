@@ -6,9 +6,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()  
-from openai import OpenAI
+# from openai import OpenAI
 # client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-client = OpenAI()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(page_title="趣味探しアプリ", layout="centered")
@@ -335,7 +334,8 @@ if st.session_state.get("show_form"):
          趣味: {hobby}
          理由:
          """
-            response = client.chat.completions.create(
+            # response = client.chat.completions.create(
+            response = openai.chat.completions.create(
                model="gpt-4",
                messages=[
                   {"role": "system", "content": "あなたは親しみやすく、簡潔で納得感のある説明が得意なアドバイザーです。"},
