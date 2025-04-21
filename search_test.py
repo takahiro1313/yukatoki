@@ -124,9 +124,9 @@ if st.session_state["show_form"]:
 
 if st.session_state.get("show_form"):
 
-   body_goals = [""]
-   mind_goals = [""]
-   skill_goals = [""]
+   # body_goals = []
+   # mind_goals = []
+   # skill_goals = []
    
    if st.button("おすすめ趣味を探す"):
     # 設問1〜5の値（ここではすでに上で取得済みの変数をそのまま使う）
@@ -168,9 +168,9 @@ if st.session_state.get("show_form"):
    #      "skill_goals": skill_goals
    # })
 
-   if not all([age, gender, address, social_style, start_preference, body_goals, mind_goals, skill_goals]):
+    if not all([age, gender, address, social_style, start_preference, body_goals, mind_goals, skill_goals]):
         st.error("未回答の設問があります。すべての項目に回答してください。")
-   else:
+    else:
          social_text = f"「{social_style}」ことができ"
          start_pref_text = f"「{start_preference}」もので"
 
